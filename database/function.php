@@ -1,5 +1,6 @@
 <?php
     include "db.php";
+    session_start();
 
     function createRow(){
         if(isset($_POST['register'])){
@@ -35,7 +36,7 @@
                 if($password===$db_password && $email===$db_email){
                     $_SESSION['s_email'] = $db_email;
                     $_SESSION['s_firstName'] = $db_firstName;
-                    $_SESSION['lastName'] = $db_lastName;
+                    $_SESSION['s_lastName'] = $db_lastName;
                     header('Location: admin/index.php');
                 }else{
                     header('Location: login.php');

@@ -10,8 +10,20 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                        <?php
+                            if(!isset($_SESSION['s_email'])){
+                        ?>
                         <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                        <?php
+                            }
+                        ?>
+                        <?php
+                            if(isset($_SESSION['s_email'])){
+                        ?>
                         <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                        <?php
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>

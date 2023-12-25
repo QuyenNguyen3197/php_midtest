@@ -3,6 +3,7 @@
         include "database/function.php";
 
         createRow();
+        
         if(isset($_POST['login'])){
             login($_POST['email'],$_POST['password']);
           }
